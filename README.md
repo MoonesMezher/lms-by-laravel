@@ -1,4 +1,4 @@
-#Library Management System (LMS)
+<h1>Library Management System (LMS)</h1>
 
 - Postman test [documenter](https://documenter.getpostman.com/view/28836077/2sA3JM6gTo)
 - Here are the instructions for setting up the project: <br/>
@@ -28,31 +28,31 @@ NOTE: you need to install xammp and any editor on your desktop.
 <br><code>php artisan serve</code><br>
 10- Access the application in your web browser at http://localhost:8000. 
 
-#API Endpoints Overview
+<h1>API Endpoints Overview</h1>
 
-##Users
+<h2>Users</h2>
 POST /users/register: Register a new user.<br>
 POST /users/login: Authenticate a user and return a token.<br>
 GET /users/profile: Retrieve the profile of the currently authenticated user.<br>
 PUT /users/profile: Update user profile details.<br>
-##Books
+<h2>Books</h2>
 POST /books: Add a new book (admin only).<br>
 GET /books: List all books, with optional filters for genre, author, and availability.<br>
 GET /books/{id}: Get detailed information about a specific book.<br>
 PUT /books/{id}: Update book information (admin only).<br>
 DELETE /books/{id}: Remove a book from the library (admin only).<br>
-##Authors
+<h2>Authors</h2>
 POST /authors: Add a new author (admin only).<br>
 GET /authors: List all authors.<br>
 GET /authors/{id}: Get detailed information about a specific author.<br>
 PUT /authors/{id}: Update author information (admin only).<br>
 DELETE /authors/{id}: Delete an author (admin only).<br>
-##Reviews (Using Morph Relationships)
+<h2>Reviews (Using Morph Relationships)</h2>
 POST /reviews/books/{book_id}: Add a review to a book.<br>
 POST /reviews/authors/{author_id}: Add a review to an author.<br>
 GET /reviews: List all reviews for books and authors.<br>
 PUT /reviews/{id}: Update a review (original reviewer only).<br>
 DELETE /reviews/{id}: Delete a review (original reviewer or admin only).<br>
-##Notifications (Managed through Queue)
+<h2>Notifications (Managed through Queue)</h2>
 GET /notifications: List all notifications for the logged-in user.<br>
 PUT /notifications/{id}/read: Mark a notification as read.<br>
