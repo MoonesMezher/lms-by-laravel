@@ -41,7 +41,7 @@ class BookController extends Controller
             $item->price = $request->price;
 
             if($request->has('authors_ids')) {
-                $item->authors()->attach($request->author_ids);
+                $item->authors()->attach($request->author_ids->authors_id);
             }
 
             $item->save();

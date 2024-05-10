@@ -25,7 +25,7 @@ class UpdateBookRequest extends FormRequest
             'title' => 'sometimes|string',
             'price' => 'sometimes|string',
             'author_ids' => 'sometimes|array',
-            'author_ids.*' => 'exists:books,id',
+            'author_ids.*' => 'exists:authors,id',
         ];
     }
 }

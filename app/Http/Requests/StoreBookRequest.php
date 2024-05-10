@@ -25,7 +25,7 @@ class StoreBookRequest extends FormRequest
             'title' => 'string|required',
             'price' => 'string|required',
             'author_ids' => 'array',
-            'author_ids.*' => 'exists:books,id',
+            'author_ids.*' => 'exists:authors,id',
         ];
     }
 }
